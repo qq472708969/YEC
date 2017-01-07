@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <com.common.widget.comment.brow.BrowViewPager
+        android:id="@+id/vp_brow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_size_150" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vp_brow"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/qq_brow_panel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/qq"
+            android:textColor="@color/load_nav_infoTextColor"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/e_brow_panel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/emoji"
+            android:textColor="@color/load_nav_infoTextColor"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/other_brow_panel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/other"
+            android:textColor="@color/load_nav_infoTextColor"
+            android:textSize="@dimen/text_size_17" />
+
+        <ImageView
+            android:id="@+id/btn_del"
+            style="@style/wh_wrap_wrap"
+            android:layout_marginRight="@dimen/space_size_8"
+            android:padding="@dimen/space_size_1"
+            android:src="@drawable/btn_del_selector" />
+    </LinearLayout>
+</RelativeLayout>

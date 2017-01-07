@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PagerTabIndicator">
+        <attr name="slidingBlock" format="reference|color" />
+        <attr name="fullWidth" format="boolean" />
+        <attr name="disableViewPager" format="boolean" />
+        <attr name="slidingBlockTxtColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="CommentArea">
+        <attr name="showShare" format="boolean" />
+        <attr name="showFav" format="boolean" />
+        <attr name="showBrow" format="boolean" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Widget</string>
+    <!--LoadStateLayout-->
+    <string name="loading">载入中…</string>
+    <string name="click_refresh">内容加载失败\r\n点击重新加载</string>
+    <string name="network_error">没有可用的网络</string>
+    <string name="no_data">空空如也</string>
+    <!--footer-->
+    <string name="footer_state_loading">加载中…</string>
+    <string name="footer_state_error">加载失败</string>
+    <string name="footer_state_net_error">网络错误</string>
+    <string name="footer_state_not_more">没有更多数据</string>
+    <!--comment_area-->
+    <string name="send_comment">说点吧...</string>
+    <string name="other">其它</string>
+    <string name="emoji">Emoji</string>
+    <string name="qq">QQ</string>
+</resources>

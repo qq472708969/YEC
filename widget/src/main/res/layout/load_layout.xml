@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/wh_match_match"
+    android:background="@color/load_nav_layout"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/wh_wrap_wrap">
+
+        <ImageView
+            android:id="@+id/iv_fail"
+            style="@style/wh_wrap_wrap"
+            android:background="@mipmap/net_error"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/pb"
+            style="@style/wh_wrap_wrap"
+            android:indeterminateDrawable="@drawable/loding_icons"
+            android:indeterminateDuration="600" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_tip"
+        style="@style/wh_wrap_wrap"
+        android:text="@string/loading"
+        android:textColor="@color/load_nav_infoTextColor"
+        android:textSize="@dimen/text_size_16" />
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="wh_match_match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="wh_wrap_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!--评论区-->
+    <style name="comment_area_img" parent="wh_wrap_wrap">
+        <item name="android:visibility">gone</item>
+        <item name="android:padding">@dimen/space_size_6</item>
+    </style>
+</resources>

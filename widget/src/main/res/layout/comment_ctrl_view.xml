@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!--imeOptions="actionSend"弹出的软键盘右下角有发送按钮-->
+    <!--android:maxLines="3"android:minLines="1" 测试api23成对出现才有作用-->
+    <LinearLayout
+        android:id="@+id/ll_input_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/edit_comment_area_selector"
+            android:hint="@string/send_comment"
+            android:imeOptions="actionSend"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:minLines="1"
+            android:padding="@dimen/space_size_8"
+            android:textSize="@dimen/text_size_14" />
+
+        <ImageView
+            android:id="@+id/iv_send"
+            style="@style/wh_wrap_wrap"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/space_size_8"
+            android:background="@drawable/btn_send_selector" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_input_send"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_brow"
+            style="@style/comment_area_img"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/brow_comment_area_selector" />
+
+        <ImageView
+            android:id="@+id/iv_fav"
+            style="@style/comment_area_img"
+            android:layout_toRightOf="@+id/iv_brow"
+            android:src="@drawable/collection_comment_area_selector" />
+
+        <ImageView
+            android:id="@+id/iv_share"
+            style="@style/comment_area_img"
+            android:layout_toRightOf="@+id/iv_fav"
+            android:src="@drawable/share_comment_area_selector" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:visibility="gone"></FrameLayout>
+</merge>

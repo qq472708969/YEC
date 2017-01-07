@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="load_nav_layout">#f6f6f6</color>
+    <color name="load_nav_infoTextColor">#999999</color>
+    <color name="list_more_color">#DADADA</color>
+    <color name="white">#FFFFFF</color>
+</resources>
