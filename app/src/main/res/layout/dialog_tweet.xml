@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/space_16">
+
+    <TextView
+        android:id="@+id/tweet_copy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@mipmap/copy"
+        android:gravity="center"
+        android:text="@string/tweet_copy" />
+
+    <TextView
+        android:id="@+id/tweet_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@mipmap/del"
+        android:gravity="center"
+        android:text="@string/tweet_del"
+        android:visibility="gone" />
+</LinearLayout>

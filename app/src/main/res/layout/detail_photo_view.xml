@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--保持宽高比：adjustViewBounds="true"-->
+    <!--中间位置显示：scaleType="fitCenter"-->
+    <com.yy.yec.ui.widget.PictureView
+        android:id="@+id/pv_currPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true" />
+</FrameLayout>

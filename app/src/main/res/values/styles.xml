@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dialog 添加按钮样式===-->
+    <style name="add_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/space_0</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">@dimen/space_11</item>
+    </style>
+
+    <style name="add_item_img">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+    </style>
+
+    <style name="add_item_text" parent="wh_wrap_wrap">
+        <item name="android:layout_marginTop">@dimen/space_1</item>
+        <item name="android:textColor">@color/add_dialog_text_selector</item>
+        <item name="android:textSize">@dimen/text_size_12</item>
+    </style>
+
+    <style name="dialog_tip_animation" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/dialog_tip_enter_anim</item>
+        <item name="@android:windowExitAnimation">@anim/dialog_tip_exit_anim</item>
+    </style>
+    <!--按钮样式===-->
+    <style name="App_ButtonStyle">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="elevation">0dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--宽高-->
+    <style name="wh_match_match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="wh_wrap_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!--PagerIndicator的文字样式-->
+    <!-- viewpage文本  滑动标签标题 -->
+    <style name="fragment_viewpage_indiator_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/fragment_viewpage_selector_indicator_title</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+    <!-- 横向线条 -->
+    <style name="h_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/space_1</item>
+        <item name="android:background">@color/day_line_color</item>
+    </style>
+    <!-- 纵向线条 -->
+    <style name="v_line">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/day_line_color</item>
+    </style>
+    <!--用户信息界面  动弹  收藏  关注粉丝  布局-->
+    <style name="user_home_info_counts_item">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@drawable/user_home_info_counts_selector</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <!--用户信息界面  动弹  收藏  关注粉丝  计数布局中的顶部数字-->
+    <style name="user_home_info_num" parent="wh_wrap_wrap">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_26</item>
+        <item name="android:padding">@dimen/space_0</item>
+    </style>
+    <!--用户信息界面  动弹  收藏  关注 粉丝  计数布局中的底部文字-->
+    <style name="user_home_info_text" parent="user_home_info_num">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!--用户信息界面 底部的横条功能区-->
+    <style name="user_option_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/list_item_selector</item>
+        <item name="android:clickable">true</item>
+        <item name="android:padding">@dimen/space_13</item>
+    </style>
+
+    <style name="user_option_item_left_img">
+        <item name="android:layout_centerVertical">true</item><!--相对于父级是居中的-->
+        <item name="android:layout_width">@dimen/space_19</item>
+        <item name="android:layout_height">@dimen/space_19</item>
+        <item name="android:layout_marginRight">@dimen/space_18</item>
+    </style>
+
+    <style name="user_option_item_right_img">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_width">@dimen/space_13</item>
+        <item name="android:layout_height">@dimen/space_13</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:src">@mipmap/ic_arrow_right</item>
+    </style>
+
+    <style name="user_option_item_left_text" parent="wh_wrap_wrap">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">?attr/textColor</item>
+    </style>
+
+    <style name="user_option_item_divider">
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/list_divider_color</item>
+        <item name="android:layout_marginLeft">@dimen/space_49</item>
+    </style>
+    <!--涟漪的范围限制布局-->
+    <style name="ripple_wh_match_match" parent="wh_match_match">
+        <item name="android:background">@color/white</item>
+    </style>
+    <!--全屏显示主题-->
+    <style name="Theme.NoTitle.Translucent" parent="Theme.AppCompat.Light">
+        <item name="android:windowFrame">@null</item><!-- 边框 -->
+        <item name="android:windowIsTranslucent">true</item><!-- 半透明 -->
+        <item name="windowNoTitle">true</item><!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item><!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item><!-- 模糊 -->
+        <item name="windowActionBar">false</item>
+    </style>
+</resources>

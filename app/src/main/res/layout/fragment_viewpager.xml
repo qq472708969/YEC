@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- 导航标题栏 -->
+    <com.common.widget.PagerTabIndicator
+        android:id="@+id/pt_pagerTabIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/windows_bg"
+        app:fullWidth="true"
+        app:slidingBlock="?attr/sliding_block_bg" />
+
+    <View
+        android:id="@+id/view_pager_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/pt_pagerTabIndicator"
+        android:background="?attr/lineColor" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_pager"
+        style="@style/wh_match_match"
+        android:layout_below="@id/view_pager_line"></android.support.v4.view.ViewPager>
+
+    <com.common.widget.LoadStateLayout
+        android:id="@+id/lcl_StatePager"
+        style="@style/wh_match_match"
+        android:visibility="gone" />
+
+</RelativeLayout>

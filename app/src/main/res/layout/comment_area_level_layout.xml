@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_blog_detail_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/related_comments"
+        android:textColor="@color/ques_bt_text_color_dark"
+        android:textSize="12sp" />
+
+    <View
+        style="@style/h_line"
+        android:layout_height="1px" />
+
+    <LinearLayout
+        android:id="@+id/lay_blog_detail_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp" />
+
+    <TextView
+        android:id="@+id/tv_see_more_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:paddingBottom="@dimen/space_8"
+        android:paddingTop="@dimen/space_8"
+        android:text="@string/see_more"
+        android:textColor="@color/ques_bt_text_color_light"
+        android:textSize="14sp" />
+
+    <View
+        style="@style/h_line"
+        android:layout_height="1px" />
+</merge>

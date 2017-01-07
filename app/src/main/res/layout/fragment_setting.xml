@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/project_detail_item"
+    android:orientation="vertical">
+
+    <FrameLayout style="@style/ripple_wh_match_match">
+
+        <RelativeLayout
+            android:id="@+id/fl_logout"
+            style="@style/user_option_item">
+
+            <TextView
+                style="@style/user_option_item_left_text"
+                android:layout_toRightOf="@+id/iv_msg"
+                android:text="@string/logout" />
+        </RelativeLayout>
+
+        <View
+            style="@style/user_option_item_divider"
+            android:layout_marginLeft="@dimen/space_0" />
+    </FrameLayout>
+</ScrollView>

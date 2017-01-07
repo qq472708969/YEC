@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--主题 自定义属性-->
+    <attr name="textColor" format="reference" />
+    <attr name="infoTextColor" format="reference" />
+    <attr name="layout_bg_normal" format="reference" />
+    <attr name="lineColor" format="reference" />
+    <attr name="windows_bg" format="reference" />
+    <attr name="sliding_block_bg" format="reference" />
+    <attr name="editor_color" format="reference" />
+    <attr name="editor_hit_color" format="reference" />
+    <attr name="comment_reply_container_bg" format="reference" />
+    <attr name="message_bg_left" format="reference" />
+    <attr name="message_bg_right" format="reference" />
+    <!--dialog六张图-->
+    <attr name="add_icon_text_selector" format="reference" />
+    <attr name="add_icon_album_selector" format="reference" />
+    <attr name="add_icon_camera_selector" format="reference" />
+    <attr name="add_icon_voice_selector" format="reference" />
+    <attr name="add_icon_code2_selector" format="reference" />
+    <attr name="add_icon_note_selector" format="reference" />
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/comment_count"
+        android:orderInCategory="10000000"
+        android:title="评论"
+        app:actionLayout="@layout/menu_comment_count"
+        app:showAsAction="always" />
+</menu>
+    <!--orderInCategory-->
+    <!--值越大优先级越大-->
+    <!--showAsAction-->
+    <!--always：总是显示在界面上--><!--never：不显示在界面上，只让出现在右边的三个点中--><!--ifRoom：如果有位置才显示，不然就出现在右边的三个点中-->

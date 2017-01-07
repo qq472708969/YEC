@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--专为textColor服务-->
+    <item android:color="@color/text_pressed" android:state_pressed="true" />
+    <item android:color="@color/text_no_pressed" />
+</selector>

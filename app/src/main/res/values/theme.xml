@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- splashActivity   android:Theme.Black.NoTitleBar.Fullscreen黑背景，无工具栏并且全屏即可-->
+    <style name="Theme.AppStartLoad" parent="android:Theme.Black.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@mipmap/welcome</item>
+        <!--在老版本里，使用windowNoTitle-->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <!-- Activity主题 日间模式 ===-->
+    <style name="AppBaseTheme_Light" parent="AppBaseTheme_Light.Base" />
+
+    <style name="AppBaseTheme_Light.Base" parent="@style/Theme.AppCompat.Light">
+        <!--api20中引入的elevation新概念z轴高度为0-->
+        <item name="elevation">0dp</item>
+        <!--返回按钮样式-->
+        <item name="homeAsUpIndicator">@drawable/back_home_selector</item>
+        <!--actionBar颜色-->
+        <item name="colorPrimary">@color/day_colorPrimary</item>
+        <!--通知栏颜色-->
+        <item name="colorPrimaryDark">@color/day_colorPrimaryDark</item>
+        <item name="android:textColorLink">#0b9a27</item>
+        <item name="colorAccent">@color/day_colorPrimary</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="editTextColor">@color/gray</item>
+        <item name="actionBarPopupTheme">@style/ThemeOverlay.AppCompat.Dark</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="actionMenuTextColor">@color/white</item>
+        <item name="textColor">@color/day_textColor</item>
+        <item name="infoTextColor">@color/day_infoTextColor</item>
+        <item name="layout_bg_normal">@color/day_layout_bg_normal</item>
+        <item name="lineColor">@color/day_line_color</item>
+        <item name="windows_bg">@color/day_windows_bg</item>
+        <item name="sliding_block_bg">@drawable/image_sliding_block</item>
+        <item name="android:editTextColor">@color/day_edit_color</item>
+        <item name="android:textColorHint">@color/day_edit_hit_color</item>
+        <!--<item name="comment_reply_container_bg">@drawable/day_comment_reply_container_bg</item>-->
+        <!--<item name="message_bg_left">@drawable/chat_from_bg_normal</item>-->
+        <!--<item name="message_bg_right">@drawable/chat_to_bg_normal</item>-->
+        <item name="actionBarStyle">@style/Theme.App.ActionBar</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:buttonStyle">@style/App_ButtonStyle</item>
+        <item name="add_icon_text_selector">@drawable/item_icon_text_selector</item>
+        <item name="add_icon_album_selector">@drawable/item_icon_album_selector</item>
+        <item name="add_icon_camera_selector">@drawable/item_icon_photo_selector</item>
+        <item name="add_icon_voice_selector">@drawable/item_icon_voice_selector</item>
+        <item name="add_icon_code2_selector">@drawable/item_icon_code2_selector</item>
+        <item name="add_icon_note_selector">@drawable/item_icon_note_selector</item>
+    </style>
+
+    <!--工具栏-->
+    <style name="Theme.App.ActionBar" parent="style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="elevation">0dp</item>
+    </style>
+
+    <!--弹出框主题===-->
+    <style name="dialog_common" parent="@style/Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@drawable/dialog_background</item>
+        <item name="android:windowAnimationStyle">@style/dialog_tip_animation</item>
+    </style>
+</resources>

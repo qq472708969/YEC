@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_item_word"
+        style="@style/add_item">
+
+        <ImageView
+            style="@style/add_item_img"
+            android:src="?attr/add_icon_text_selector" />
+
+        <TextView
+            style="@style/add_item_text"
+            android:text="@string/add_item_word" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_item_album"
+        style="@style/add_item">
+
+        <ImageView
+            style="@style/add_item_img"
+            android:src="?attr/add_icon_album_selector" />
+
+        <TextView
+            style="@style/add_item_text"
+            android:text="@string/add_item_album" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_item_camera"
+        style="@style/add_item">
+
+        <ImageView
+            style="@style/add_item_img"
+            android:src="?attr/add_icon_camera_selector" />
+
+        <TextView
+            style="@style/add_item_text"
+            android:text="@string/add_item_camera" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_item_voice"
+        style="@style/add_item">
+
+        <ImageView
+            style="@style/add_item_img"
+            android:src="?attr/add_icon_voice_selector" />
+
+        <TextView
+            style="@style/add_item_text"
+            android:text="@string/add_item_voice" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_item_code2"
+        style="@style/add_item">
+
+        <ImageView
+            style="@style/add_item_img"
+            android:src="?attr/add_icon_code2_selector" />
+
+        <TextView
+            style="@style/add_item_text"
+            android:text="@string/add_item_qrcode" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_item_note"
+        style="@style/add_item">
+
+        <ImageView
+            style="@style/add_item_img"
+            android:src="?attr/add_icon_note_selector" />
+
+        <TextView
+            style="@style/add_item_text"
+            android:text="@string/add_item_note" />
+    </LinearLayout>
+</LinearLayout>

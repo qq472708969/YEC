@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/uuu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.common.widget.ScrollRefreshLayout
+            android:id="@+id/scrollRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.yy.yec.ui.widget.NestedScrollListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/transparent"
+                android:dividerHeight="0dp" />
+        </com.common.widget.ScrollRefreshLayout>
+    </RelativeLayout>
+
+    <com.common.widget.LoadStateLayout
+        android:id="@+id/lsl_statelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PagerTabIndicator">
+        <attr name="slidingBlock" format="reference|color" />
+        <attr name="fullWidth" format="boolean" />
+        <attr name="disableViewPager" format="boolean" />
+        <attr name="slidingBlockTxtColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="TweetPicturesLayout">
+        <attr name="verticalSpace" format="dimension" />
+        <attr name="horizontalSpace" format="dimension" />
+        <attr name="column" format="integer" />
+        <attr name="maxPictureSize" format="dimension" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--公共-->
+    <string name="app_name">用e通</string>
+    <string name="you_have_news_messages">你有%s条最新消息</string>
+    <string name="see_more">查看更多</string>
+    <string name="comment_list">评论列表</string>
+    <!--用户设置-->
+    <string name="user_setting">个人设置</string>
+    <string name="logout">注销</string>
+    <!--下载图片-->
+    <string name="help_dialog">帮助</string>
+    <string name="help_dialog_content">下载图片需要“存储空间”权限</string>
+    <string name="help_dialog_setting">去设置</string>
+    <string name="help_dialog_exit">取消</string>
+    <!--登录-->
+    <string name="login_title">用户</string>
+    <string name="login_btn">登录</string>
+    <string name="progress_login">正在登录…</string>
+    <string name="input_userName">请输入邮箱/用户名</string>
+    <string name="input_pwd">请输入密码</string>
+    <!--nav-->
+    <string name="tabwidget_news">号外</string>
+    <string name="tabwidget__tweet">动态</string>
+    <string name="tabwidget__add">添加</string>
+    <string name="tabwidget__my">我的</string>
+    <string name="tabwidget__explore">探索</string>
+    <!--add Dialog-->
+    <string name="add_item_word">文字</string>
+    <string name="add_item_album">相册</string>
+    <string name="add_item_camera">拍照</string>
+    <string name="add_item_voice">语音</string>
+    <string name="add_item_qrcode">扫一扫</string>
+    <string name="add_item_note">便签</string>
+    <!--评论，公共区层叠布局，底部布局-->
+    <string name="related_comments">相关评论</string>
+    <string name="success_comments">评论成功</string>
+    <string name="comment_context_empty">评论内容不能为空</string>
+    <string name="submit_comment_ing">正在提交评论...</string>
+    <string name="submit_failure_comment_ing">评论失败</string>
+    <string name="reply">回复</string>
+    <string name="the_landlord">楼主</string>
+    <string name="reply_refer_content">的评论：</string>
+    <string name="comment_placeholder">说点吧...</string>
+    <!--网络-->
+    <string name="tip_no_internet">当前没有可用的网络链接</string>
+    <!--detail内容标题-->
+    <string name="news_detail_title">资讯内容</string>
+    <!--用户信息界面-->
+    <string name="user_score">积分</string>
+    <string name="user_home_item_tweet">动弹</string>
+    <string name="user_home_item_favorite">收藏</string>
+    <string name="user_home_item_following">关注</string>
+    <string name="user_home_item_fans">粉丝</string>
+    <string name="user_home_update_ing">正在更新用户信息...</string>
+    <string name="user_home_update_success">用户信息更新成功</string>
+    <string name="user_home_update_failure">用户信息更新失败</string>
+    <!--保存-->
+    <string name="save_state_succeed">保存成功</string>
+    <string name="save_state_fail">保存失败</string>
+    <!--号外界面-->
+    <string-array name="news_viewpage">
+        <item>资讯</item>
+        <item>博客</item>
+        <item>问答</item>
+        <item>活动</item>
+    </string-array>
+    <!--动态界面-->
+    <string-array name="tweets_viewpage">
+        <item>最新动态</item>
+        <item>最火动态</item>
+        <!--<item>我的动态</item>-->
+    </string-array>
+    <!--平台-->
+    <string name="form_mobile">手机</string>
+    <string name="form_android">Android</string>
+    <string name="form_iphone">iPhone</string>
+    <string name="form_windows_phone">Windows Phone</string>
+    <string name="form_wechat">微信</string>
+    <!--动态-》 删除，复制-->
+    <string-array name="tweet_detail_likeAndComment">
+        <!--<string name="tweet_detail_like">赞(%s)</string>-->
+        <!--<string name="tweet_detail_comment">评论(%s)</string>-->
+        <item>评论(%s)</item>
+        <item>赞(%s)</item>
+    </string-array>
+    <string name="tweet_like_Click">喂...等%s秒吧</string>
+    <string name="tweet_detail">动态详情</string>
+    <string name="tweet_del_confirm"> 确定删除此条动态</string>
+    <string name="copy_success">复制成功</string>
+    <string name="remove_tweet_success">动态删除成功</string>
+    <string name="remove_tweet_fail">动态删除失败，可能网络不佳</string>
+    <string name="tweet_del">删除</string>
+    <string name="tweet_copy">复制</string>
+    <!--选择-->
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+</resources>

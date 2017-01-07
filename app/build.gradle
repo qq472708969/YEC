@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'//编译时注解
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.yy.yec"
+        minSdkVersion 17
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    //下载，导包
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'org.kymjs.kjframe:kjframe:2.6'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    // compile 'com.thoughtworks.xstream:xstream:1.4.7'//网络导入会有依赖jdk版本问题
+    compile files('libs/xstream-1.4.7.jar')
+    compile 'com.belerweb:pinyin4j:2.5.1'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile project(path: ':widget')
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.github.chrisbanes.photoview:library:1.2.4'
+    compile 'com.github.hotchemi:permissionsdispatcher:2.2.0'//运行时权限
+    apt 'com.github.hotchemi:permissionsdispatcher-processor:2.2.0'//运行时权限
+}
