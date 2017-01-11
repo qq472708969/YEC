@@ -22,7 +22,8 @@ public class HaveReadList extends PropertyStorage {
     public static HaveReadList getInstance() {
         if (_this == null)
             synchronized (HaveReadList.class) {
-                _this = new HaveReadList();
+                if (_this == null)
+                    _this = new HaveReadList();
             }
         return _this;
     }

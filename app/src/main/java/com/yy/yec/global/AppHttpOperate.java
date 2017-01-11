@@ -29,7 +29,8 @@ public class AppHttpOperate {
     public static AppHttpOperate getInstance() {
         if (_this == null)
             synchronized (AppHttpOperate.class) {
-                _this = new AppHttpOperate();
+                if (_this == null)
+                    _this = new AppHttpOperate();
             }
         return _this;
     }

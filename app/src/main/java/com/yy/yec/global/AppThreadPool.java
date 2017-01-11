@@ -13,7 +13,8 @@ public class AppThreadPool {
     public static Executor getInstance() {
         if (_this == null)
             synchronized (AppThreadPool.class) {
-                _this = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors() > 0 ? Runtime.getRuntime().availableProcessors() : 3);
+                if (_this == null)
+                    _this = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors() > 0 ? Runtime.getRuntime().availableProcessors() : 3);
             }
         return _this;
     }

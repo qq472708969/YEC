@@ -23,7 +23,8 @@ public class AppCurrentUser {
     public static AppCurrentUser getInstance() {
         if (_this == null)
             synchronized (AppCurrentUser.class) {
-                _this = new AppCurrentUser();
+                if (_this == null)
+                    _this = new AppCurrentUser();
             }
         return _this;
     }

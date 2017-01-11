@@ -18,7 +18,8 @@ public class AppConfig extends PropertyStorage {
     public static AppConfig getInstance() {
         if (_this == null)
             synchronized (AppConfig.class) {
-                _this = new AppConfig();
+                if (_this == null)
+                    _this = new AppConfig();
             }
         return _this;
     }

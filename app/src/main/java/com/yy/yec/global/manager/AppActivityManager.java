@@ -20,12 +20,14 @@ public class AppActivityManager {
     public static AppActivityManager getInstance() {
         if (_this == null)
             synchronized (AppActivityManager.class) {
-                _this = new AppActivityManager();
+                if (_this == null)
+                    _this = new AppActivityManager();
             }
 
         if (activityStack == null)
             synchronized (AppActivityManager.class) {
-                activityStack = new Stack<Activity>();
+                if (activityStack == null)
+                    activityStack = new Stack<Activity>();
             }
         return _this;
     }
