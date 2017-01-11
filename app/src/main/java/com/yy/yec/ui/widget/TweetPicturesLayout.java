@@ -188,7 +188,12 @@ public class TweetPicturesLayout extends ViewGroup implements View.OnClickListen
                 childView.measure(MeasureSpec.makeMeasureSpec(childSize, MeasureSpec.EXACTLY), MeasureSpec.makeMeasureSpec(childSize, MeasureSpec.EXACTLY));
             }
 
-            int lines = (int) (childCount / (float) mColumn + 0.9);
+            int lines = 0;//(int) (childCount / (float) mColumn + 0.9);
+            Object linesFloat = childCount / (float) mColumn;
+            if (linesFloat instanceof Integer || linesFloat instanceof Long)
+                lines = (int) linesFloat;
+            else
+                lines = (int) linesFloat + 1;
             wantedHeight += (int) (lines * childSize + mVerticalSpacing * (lines - 1));
         }
 
