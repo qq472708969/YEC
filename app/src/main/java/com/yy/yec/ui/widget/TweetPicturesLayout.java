@@ -188,13 +188,12 @@ public class TweetPicturesLayout extends ViewGroup implements View.OnClickListen
                 childView.measure(MeasureSpec.makeMeasureSpec(childSize, MeasureSpec.EXACTLY), MeasureSpec.makeMeasureSpec(childSize, MeasureSpec.EXACTLY));
             }
 
-            int lines = 0;//(int) (childCount / (float) mColumn + 0.9);
-            Object linesFloat = childCount / (float) mColumn;
-            if (linesFloat instanceof Integer || linesFloat instanceof Long)
-                lines = (int) linesFloat;
-            else
-                lines = (int) linesFloat + 1;
-            wantedHeight += (int) (lines * childSize + mVerticalSpacing * (lines - 1));
+            //int lines = 0;//(int) (childCount / (float) mColumn + 0.9);
+            float linesFloat = childCount / (float) mColumn;
+            int linesInt = (int) linesFloat;
+            if (linesFloat - linesInt > 0)//保证足够的行数显示完整的图片
+                ++linesInt;
+            wantedHeight += (int) (linesInt * childSize + mVerticalSpacing * (linesInt - 1));
         }
 
         setMeasuredDimension(selfWidth, resolveSize(wantedHeight, heightMeasureSpec));//设置自己的大小
