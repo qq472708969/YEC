@@ -38,15 +38,15 @@ public class ImgUtils {
     }
 
     private static void load(Context c, String uri, @DrawableRes int resPlaceHolder, @DrawableRes int resError, ImageView img, boolean placeholder, boolean error, boolean centerCrop) {
-        DrawableRequestBuilder drb = initGlide(c).
+        DrawableRequestBuilder drb = initGlide(App.context()).load(uri).
                 //---这种方式能够适应不同的请求对应不同的model，比直接使用<meta-data>更灵活---
-                        using(new ImgSizeUrlLoader(c)).//使用一个UrlLoad策略
-                load(new ImgSize(uri)).
+                        //using(new ImgSizeUrlLoader(c)).//使用一个UrlLoad策略
+               // load(new ImgSize(uri)).
                 //------
                 //     thumbnail(0.1f)//先加载一个缩略图，提高展示速度
                 //使用同一缓存策略，才能有效的读取缓存
                 //ALL：缓存所有，加载过程中的所有图片状态；RESULT ：缓存转换之后的图像（忽略中间状态）;SOURCE：只缓存原图
-                        diskCacheStrategy(DiskCacheStrategy.SOURCE);
+                        diskCacheStrategy(DiskCacheStrategy.RESULT);
         if (placeholder)
             drb.placeholder(resPlaceHolder);
         if (error)

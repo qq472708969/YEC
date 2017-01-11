@@ -60,7 +60,7 @@ public class TweetPicturesLayout extends ViewGroup implements View.OnClickListen
             // Load clip touch corner radius
             vSpace = a.getDimensionPixelOffset(R.styleable.TweetPicturesLayout_verticalSpace, vSpace);
             hSpace = a.getDimensionPixelOffset(R.styleable.TweetPicturesLayout_horizontalSpace, hSpace);
-            setColumn(a.getInt(R.styleable.TweetPicturesLayout_column, 3));
+            setColumn(a.getInt(R.styleable.TweetPicturesLayout_column, 3));//默认3列
             setMaxPictureSize(a.getDimensionPixelOffset(R.styleable.TweetPicturesLayout_maxPictureSize, 0));
             a.recycle();
         }
@@ -138,8 +138,8 @@ public class TweetPicturesLayout extends ViewGroup implements View.OnClickListen
         int paddingRight = getPaddingRight();
         int paddingBottom = getPaddingBottom();
 
-        int selfWidth = resolveSize(paddingLeft + paddingRight, widthMeasureSpec);
-        int wantedHeight = paddingBottom + paddingTop;
+        int selfWidth = resolveSize(paddingLeft + paddingRight, widthMeasureSpec);//把padding算进来
+        int wantedHeight = paddingBottom + paddingTop;//原有基础上增加的高度
         final int childCount = getChildCount();
 
         //noinspection StatementWithEmptyBody
@@ -182,18 +182,17 @@ public class TweetPicturesLayout extends ViewGroup implements View.OnClickListen
             final float maxContentWidth = selfWidth - paddingRight - paddingLeft - mHorizontalSpacing * (mColumn - 1);
             // Get child size
             final int childSize = getMaxChildSize((int) (maxContentWidth / mColumn));
-
+            View childView = null;
             for (int i = 0; i < childCount; ++i) {
-                View childView = getChildAt(i);
-                childView.measure(MeasureSpec.makeMeasureSpec(childSize, MeasureSpec.EXACTLY),
-                        MeasureSpec.makeMeasureSpec(childSize, MeasureSpec.EXACTLY));
+                childView = getChildAt(i);
+                childView.measure(MeasureSpec.makeMeasureSpec(childSize, MeasureSpec.EXACTLY), MeasureSpec.makeMeasureSpec(childSize, MeasureSpec.EXACTLY));
             }
 
             int lines = (int) (childCount / (float) mColumn + 0.9);
             wantedHeight += (int) (lines * childSize + mVerticalSpacing * (lines - 1));
         }
 
-        setMeasuredDimension(selfWidth, resolveSize(wantedHeight, heightMeasureSpec));
+        setMeasuredDimension(selfWidth, resolveSize(wantedHeight, heightMeasureSpec));//设置自己的大小
     }
 
     @Override
