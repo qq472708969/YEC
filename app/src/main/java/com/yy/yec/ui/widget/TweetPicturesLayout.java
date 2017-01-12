@@ -22,8 +22,8 @@ import com.yy.yec.utils.ImgUtils;
 public class TweetPicturesLayout extends ViewGroup implements View.OnClickListener {
     private static final int SINGLE_MAX_W = 120;
     private static final int SINGLE_MAX_H = 180;
-    private static final int SINGLE_MIN_W = 34;
-    private static final int SINGLE_MIN_H = 34;
+    private static final int SINGLE_MIN_W = 36;
+    private static final int SINGLE_MIN_H = 36;
 
     private Tweet.Image[] mImages;
     private float mVerticalSpacing;
