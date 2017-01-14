@@ -10,6 +10,7 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true//多dex时优化（方法数超过65536）
     }
     buildTypes {
         release {
