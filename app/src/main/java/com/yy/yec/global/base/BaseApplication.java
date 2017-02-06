@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
+import android.support.multidex.MultiDex;
 import android.support.multidex.MultiDexApplication;
 
 import com.yy.yec.global.manager.AppActivityManager;
@@ -16,6 +17,12 @@ import java.io.File;
 public abstract class BaseApplication extends MultiDexApplication {//dex方法数超过65536问题
     protected static Context mContext;
     protected static Resources mResource;
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);//加载多dex
+    }
 
     @Override
     public void onCreate() {
