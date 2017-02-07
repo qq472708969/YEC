@@ -17,6 +17,10 @@ import org.kymjs.kjframe.http.KJAsyncTask;
 import java.io.File;
 
 public class SplashActivity extends Activity {
+    @Override
+    public void onBackPressed() {
+        System.exit(0);//退出进程
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

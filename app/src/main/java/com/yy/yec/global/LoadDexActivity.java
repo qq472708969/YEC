@@ -25,6 +25,7 @@ public class LoadDexActivity extends Activity {
         @Override
         protected Object doInBackground(Object[] params) {
             try {
+//                Thread.sleep(15500);主进程不会ANR
                 TLog.error("LoadDexTask任务开始执行");
                 MultiDex.install(getApplication());
                 TLog.error("LoadDexTask任务执行完成");
@@ -37,12 +38,17 @@ public class LoadDexActivity extends Activity {
         @Override
         protected void onPostExecute(Object o) {
             TLog.error("LoadDexActivity即将销毁   :loadDex进程即将退出");
-            finish();
-            System.exit(0);//退出进程
+            killSelf();
         }
     }
 
     @Override
     public void onBackPressed() {
+
+    }
+
+    private void killSelf() {
+        finish();
+        System.exit(0);//退出进程
     }
 }
