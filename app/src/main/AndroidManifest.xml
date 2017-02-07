@@ -51,6 +51,16 @@
         <meta-data
             android:name="com.yy.yec.ui.widget.model.ImgMemoryCustomSizeModel"
             android:value="GlideModule" />
+        <!--multiDex实现加载dex，防止anr使用透明activity覆盖让应用进程不在是前台进程/alwaysRetainTaskState=false切换时不保留状态，excludeFromRecents=false不在最近打开的列表中显示-->
+        <activity
+            android:name=".global.LoadDexActivity"
+            android:alwaysRetainTaskState="false"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:process=":loadDex"
+            android:theme="@style/Theme.AppStartLoad"
+            android:screenOrientation="portrait"></activity>
+
         <!--screenOrientation="portrait"  始终竖屏显示-->
         <activity
             android:name=".ui.activity.basic.MainActivity"
@@ -58,13 +68,6 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.BROWSABLE" />
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data
-                    android:host="www.oschina.net"
-                    android:scheme="http" />
             </intent-filter>
         </activity>
         <activity

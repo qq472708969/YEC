@@ -21,7 +21,10 @@ public class SplashActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        if (!App.context().getSplashShow()) { //应用首次启动不展示splash页面，以loadDex进程中的activity作为启动页面
+            redirectTo();
+            return;
+        }
         Activity main = AppActivityManager.getInstance().getActivity(MainActivity.class);
         if (main != null && !main.isFinishing()) {
             finish();//防止main多实例，从新启动应用

@@ -3,7 +3,7 @@ package com.yy.yec.utils;
 import android.util.Log;
 
 public class TLog {
-    public static final String LOG_TAG = "YEC";
+    public static final String LOG_TAG = "___YEC";
     public static boolean DEBUG = true;
 
     public TLog() {
