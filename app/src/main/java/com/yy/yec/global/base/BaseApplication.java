@@ -100,7 +100,7 @@ public abstract class BaseApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        if (firstLoadDex()) return;
+        if (firstLoadDex() && Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) return;//api21以上都正常执行
         TLog.error("onCreate方法正常执行");
         mContext = getApplicationContext();
         mResource = getResources();
