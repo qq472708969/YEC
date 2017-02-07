@@ -24,7 +24,7 @@ import java.io.File;
 public abstract class BaseApplication extends Application {
     protected static Context mContext;
     protected static Resources mResource;
-    private boolean splashShow= true;
+    private boolean splashShow = true;
 
     @Override
     protected void attachBaseContext(Context base) {
@@ -84,8 +84,14 @@ public abstract class BaseApplication extends Application {
         intent.setComponent(componentName);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
+        long startWait = System.currentTimeMillis();
         TLog.error(":loadDex进程LoadDexActivity已经启动");
         while (firstLoadDex()) {
+            if (System.currentTimeMillis() - startWait > 39 * 1000) {//大于39秒直接退出
+                TLog.error("LoadDexTask任务监测超时！");
+                System.exit(0);
+                return;
+            }
             TLog.error("LoadDexTask任务监测中。。。");
         }
         TLog.error("监测:loadDex进程activity中的异步任务MultiDex-install 执行完成！！！");
