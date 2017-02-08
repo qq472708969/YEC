@@ -106,7 +106,7 @@ public class TweetPicturesLayout extends ViewGroup implements View.OnClickListen
                 view.setOnClickListener(this);
                 String path = images[i].getThumb();
                 ImgUtils.load(getContext(), path, view);
-                view.setTag(i);
+                //view.setTag(i);//会破坏glide查找资源执行
                 addView(view);
             }
 

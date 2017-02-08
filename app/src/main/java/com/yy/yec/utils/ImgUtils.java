@@ -22,7 +22,7 @@ import com.yy.yec.ui.widget.model.ImgSizeUrlLoader;
  */
 public class ImgUtils {
     private static RequestManager initGlide(Context c) {
-        return Glide.with(App.context());
+        return Glide.with(c);
     }
 
     public static void load(Context c, String uri, @DrawableRes int res, ImageView img) {//placeholder和error共用
@@ -38,7 +38,7 @@ public class ImgUtils {
     }
 
     private static void load(Context c, String uri, @DrawableRes int resPlaceHolder, @DrawableRes int resError, ImageView img, boolean placeholder, boolean error, boolean centerCrop) {
-        DrawableRequestBuilder drb = initGlide(App.context()).load(uri).
+        DrawableRequestBuilder drb = initGlide(c).load(uri).
                 //---这种方式能够适应不同的请求对应不同的model，比直接使用<meta-data>更灵活---
                         //using(new ImgSizeUrlLoader(c)).//使用一个UrlLoad策略
                // load(new ImgSize(uri)).
