@@ -16,6 +16,9 @@ import com.yy.yec.ui.activity.detail.ImageGalleryActivity;
 import com.yy.yec.ui.factory.DetailActivityFactory;
 import com.yy.yec.utils.ImgUtils;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by zzq on 16/19/30.
  */
@@ -26,6 +29,9 @@ public class TweetPicturesLayout extends ViewGroup implements View.OnClickListen
     private static final int SINGLE_MIN_H = 36;
 
     private Tweet.Image[] mImages;
+    private int indexTag = 100;
+    //    private Object[] mImageViewsId;
+    //    private List<int> mImageViewsId = new ArrayList();
     private float mVerticalSpacing;
     private float mHorizontalSpacing;
     private int mColumn;
@@ -96,6 +102,7 @@ public class TweetPicturesLayout extends ViewGroup implements View.OnClickListen
         if (images == null || mImages == images)
             return;
         mImages = images;
+//        mImageViewsId = new Object[mImages.length];
         if (images != null && images.length > 0) {
             LayoutParams lp = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
             ImageView view = null;
@@ -106,8 +113,10 @@ public class TweetPicturesLayout extends ViewGroup implements View.OnClickListen
                 view.setOnClickListener(this);
                 String path = images[i].getThumb();
                 ImgUtils.load(getContext(), path, view);
-                //view.setTag(i);//会破坏glide查找资源执行
+                view.setTag(R.id.indexTag, i);//会破坏glide查找资源执行
                 addView(view);
+//                mImageViewsId[i] = view.getTag();//记录存储的view对象的id
+//                mImageViews.add(view.getId());
             }
 
             if (getVisibility() == VISIBLE)
@@ -122,6 +131,7 @@ public class TweetPicturesLayout extends ViewGroup implements View.OnClickListen
     public void removeAllImage() {
         removeAllViews();
         mImages = null;
+//        mImageViewsId = null;
     }
 
     private int getMaxChildSize(int size) {
@@ -248,8 +258,14 @@ public class TweetPicturesLayout extends ViewGroup implements View.OnClickListen
         Tweet.Image[] images = mImages;
         if (images == null)
             return;
+//        int index = 0;
+//        for (int i = 0; i < mImageViewsId.length; i++)
+//            if (v.getTag().equals(mImageViewsId[i])) {
+//                index = i;
+//                break;
+//            }
 
-        Object obj = v.getTag();
+        Object obj = v.getTag(R.id.indexTag);
         if (obj == null || !(obj instanceof Integer))
             return;
         int index = (int) obj;
